@@ -1,0 +1,185 @@
+.progress {
+    background-color: #fff;
+    position: fixed;
+    width: 800px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.progress .icons {
+    position: relative;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #146531;
+    border: 2px solid #146531;
+    transition: 0.3s;
+}
+.progress .icons.active {
+    background-color: #146531;
+    color: #fff;
+    border: 2px solid #146531;
+}
+
+.progress ::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    color: #146531;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.progress :nth-child(1)::after {
+    content: 'Household';
+}
+.progress :nth-child(2)::after {
+    content: 'Transportation';
+}
+.progress :nth-child(3)::after {
+    content: 'Travel';
+}
+.progress::after {
+    content: '';
+    background-color: #146531;
+    position: absolute;
+    height: 10px;
+    width: var(--i);
+    transition: 0.3s;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+
+.questions {
+    background-color: rgba(255, 255, 255, 0.25);
+    height: 720px;
+    width: 460px;
+    border-radius: 8px;
+    border: 2px solid #146531;
+    position: absolute;
+    top: calc(50% + 35px);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    backdrop-filter: blur(0.4rem);
+}
+form {
+    display: flex;
+    width: fit-content;
+}
+/* .question {
+    height: 540px;
+    width: 460px;
+    padding: 40px;
+} */
+
+.questions .holder {
+    height: fit-content;
+    width: 460px;
+    overflow-x: hidden;
+}
+
+.questions .holder form {
+    /* height:  600px; */
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    transition: 0.7s;
+}
+.questions .holder .question {
+    position: relative;
+    height: 720px;
+    width: 460px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 25px;
+}
+.questions .holder .question h2 {
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.questions .holder .question p {
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.questions .holder .question p .bullet {
+    position: relative;
+    border: 2px solid #146531;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.questions .holder .question p .bullet.choosen::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #146531;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+.questions .holder .question p .check {
+    position: relative;
+    border: 2px solid #146531;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.questions .holder .question p .check.choosen {
+    background-color: #146531;
+}
+
+.questions .holder .question .next{
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    background-color: #146531;
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.questions .holder .question .back {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    /* background-color: red; */
+    background-color: transparent;
+    /* width: 120px; */
+    height: 40px;
+    color: #146531;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+}
