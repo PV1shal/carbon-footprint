@@ -9,6 +9,7 @@
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 5px;
 }
 .progress .icons {
     position: relative;
@@ -56,6 +57,7 @@
     z-index: -1;
     left: 0;
     top: 0;
+    border-radius: 10px;
 }
 
 .questions {

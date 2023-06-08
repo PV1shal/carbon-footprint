@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import { AiFillHome,AiFillCar } from 'react-icons/ai';
 import { BsFillAirplaneFill,BsCheck2 } from 'react-icons/bs';
@@ -6,7 +7,7 @@ import '../styles/questions.css';
 
 
 
-const Questions = () => {
+const Questions = ({setAllAnswers,setIsResultShowen}) => {
     const [progress,setProgress] = useState(0);
     const [currentQuestion,setCurrentQuestion] = useState(0);
     const [answers,setAnswers] = useState(['','','','','','',[],[],'','','','',''])
@@ -169,7 +170,8 @@ const Questions = () => {
         if(answers[currentQuestion].length === 0){
             // setAlertData({type:'warrning',showen:true,msg:'make sure to answer the question'})
         }else {
-            console.log(answers)
+            setAllAnswers(answers)
+            setIsResultShowen(true)
         }
     }
 
