@@ -12,7 +12,7 @@ const Result = ({isResultShowen,setIsResultShowen, footPrint, tips}) => {
                 <h2>QUICK TIPS TO DECREASE YOUR FOOTPRINT</h2>
                 <ul>
                     {
-                        tips.map((tip, index) => <li key={index}>{tip}</li>)
+                        tips.length > 0 ? tips.map((tip, index) => <li key={index}>{tip}</li>) : <div className="ring"></div>
                     }
                 </ul>
             </article>
