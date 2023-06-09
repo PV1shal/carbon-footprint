@@ -46,7 +46,11 @@ function App() {
 
 
 
-
+  useEffect(()=>{
+    if(!isResultShowen){
+      setTips([])
+    }
+  },[isResultShowen])
   return (
     <main className='App'>
       <img className='top-image' src="/img1.png" alt="" />
