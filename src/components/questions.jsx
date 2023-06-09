@@ -14,12 +14,12 @@ const Questions = ({setAllAnswers,setIsResultShowen}) => {
     const questions = [
         {
             type:'radio',
-            question:'what is the Number of residents including yourself?',
+            question:'Including yourself, how many people live in your household?',
             options:['1','2','3','4','5','6+']
         },
         {
             type:'radio',
-            question:'which one do you live in?',
+            question:'Describe the house you live in?',
             options:
                 ['Detached single family home',
                 'Attached single family home',
@@ -29,7 +29,7 @@ const Questions = ({setAllAnswers,setIsResultShowen}) => {
         },
         {
             type:'radio',
-            question:'what is the size of housing?',
+            question:'what is the size of your house?',
             options:
                 ['Under 500 sq ft',
                 '500-999',
