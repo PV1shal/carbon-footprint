@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import '../styles/result.css';
+import footprintCalculator from './footprintCalculator';
 
-const Result = ({isResultShowen,setIsResultShowen}) => {
+const Result = ({isResultShowen,setIsResultShowen, footPrint}) => {
     return (
         <section className={`result ${isResultShowen && 'showen'}`} >
             <article className='top-article'>
-                <h2>YOUR FOOTPRINT IS 15.18 TONS</h2>
-                <p>It takes 217 trees to offset your annual footprint</p>
+                <h2>YOUR FOOTPRINT IS {footPrint.toFixed(2)} TONS/year</h2>
             </article>
             <article className='bottom-article'>
                 <h2>QUICK TIPS TO DECREASE YOUR FOOTPRINT</h2>
