@@ -173,6 +173,9 @@ const Questions = ({setAllAnswers,setIsResultShowen}) => {
         }else {
             setAllAnswers(answers)
             setIsResultShowen(true)
+            setProgress(0)
+            setCurrentQuestion(0)
+            setAnswers(['','','','','','',[],[],'','','','',''])
         }
     }
 
