@@ -2,7 +2,7 @@
 import '../styles/result.css';
 import footprintCalculator from './footprintCalculator';
 
-const Result = ({isResultShowen,setIsResultShowen, footPrint}) => {
+const Result = ({isResultShowen,setIsResultShowen, footPrint, tips}) => {
     return (
         <section className={`result ${isResultShowen && 'showen'}`} >
             <article className='top-article'>
@@ -11,30 +11,9 @@ const Result = ({isResultShowen,setIsResultShowen, footPrint}) => {
             <article className='bottom-article'>
                 <h2>QUICK TIPS TO DECREASE YOUR FOOTPRINT</h2>
                 <ul>
-                    <li>
-                        Tip #1
-                    </li>
-                    <li>
-                        Tip #2
-                    </li>
-                    <li>
-                        Tip #3
-                    </li>
-                    <li>
-                        Tip #4
-                    </li>
-                    <li>
-                        Tip #5
-                    </li>
-                    <li>
-                        Tip #6
-                    </li>
-                    <li>
-                        Tip #7
-                    </li>
-                    <li>
-                        Tip #8
-                    </li>
+                    {
+                        tips.map((tip, index) => <li key={index}>{tip}</li>)
+                    }
                 </ul>
             </article>
             <button className='Retake' onClick={()=>setIsResultShowen(false)}>

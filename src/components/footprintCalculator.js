@@ -62,7 +62,7 @@ const milleageValue = {
   "5,000 to 9,999 miles": 7499.5,
   "10,000 to 14,999 miles (US Average)": 12499.5,
   "15,000 to 19,999 miles": 17499.5,
-  "20,000 to 29,999 miles ": 24999.5,
+  "20,000 to 29,999 miles": 24999.5,
   "30,000+ miles": 30000,
 };
 
@@ -97,8 +97,6 @@ const hotelValue = {
 };
 
 const calulateFootprint = (data) => {
-  console.log(data);
-
   let [
     houseSize,
     houseType,
@@ -144,23 +142,6 @@ const calulateFootprint = (data) => {
       ? checksValue["I have a programmable thermostat"]
       : 0;
 
-  console.log("houseSize", houseSize);
-  console.log("houseType", houseType);
-  console.log("houseSizing", houseSizing);
-  console.log("clean", clean);
-  console.log("recycle", recycle);
-  console.log("diet", diet);
-  console.log("busTravel", busTravel);
-  console.log("carTravel", carTravel);
-  console.log("longFlights", longFlights);
-  console.log("mediumFlights", mediumFlights);
-  console.log("shortFlights", shortFlights);
-  console.log("hotelStays", hotelStays);
-  console.log("check1", check1);
-  console.log("check2", check2);
-  console.log("check3", check3);
-  console.log("check4", check4);
-
   // Calculate household footprint
   const householdFootprint =
     (4.61 + 1238.516 * clean * 0.00199896) *
@@ -181,10 +162,6 @@ const calulateFootprint = (data) => {
     mediumFlights * 0.392 +
     shortFlights * 0.075 +
     hotelStays * 0.0383;
-
-  console.log("householdFootprint", householdFootprint);
-  console.log("commuteFootprint", commuteFootprint);
-  console.log("travelFootprint", travelFootprint);
 
   return householdFootprint + commuteFootprint + travelFootprint;
 };
