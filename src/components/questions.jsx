@@ -56,7 +56,7 @@ const Questions = ({setAllAnswers,setIsResultShowen}) => {
             type:'radio',
             question:'Do you recycle items such as metal, plastic, glass, or paper?',
             options:
-            ['Yes','NO']
+            ['Yes','No']
         },
         {
             type:'radio',
@@ -79,26 +79,33 @@ const Questions = ({setAllAnswers,setIsResultShowen}) => {
         ]
         },
         {
-            type:'check',
-            question:'Select all of the ways you travel',
-            options:[
-            'Intercity/Commuter Rail',
-            'Bus/Subway/Metro',
-            'Car',
-            'Bike/Walk'
-        ]
-        },
-        {
             type:'radio',
-            question:'Average total weekly travel',
+            question:'Average total weekly travel by Bus/Subway/Metro',
             options:
             [
+                '0 miles (US Average)',
                 'Under 5 miles',
                 'Under 5 to 9.9 miles',
                 '10 to 14.9 miles',
                 '15 to 19.9 miles',
                 '20 to 29.9 miles',
                 '30+ miles',
+            ]
+        },
+        {
+            type:'radio',
+            question:'Average total weekly travel by Car',
+            options:
+            [
+                '0 miles',
+                'Under 1,000 miles',
+                '1,000 to 2,499 miles',
+                '2,500 to 4,999 miles',
+                '5,000 to 9,999 miles',
+                '10,000 to 14,999 miles (US Average)',
+                '15,000 to 19,999 miles',
+                '20,000 to 29,999 miles',
+                '30,000+ miles',
             ]
         },
         {
@@ -110,10 +117,8 @@ const Questions = ({setAllAnswers,setIsResultShowen}) => {
                 '1',
                 '2',
                 '3',
-                '4',
-                '5 to 9',
-                '10 to 14',
-                '15 to 19',
+                '4 to 9',
+                '10 to 19',
                 '20+'
             ]
         },
@@ -126,10 +131,8 @@ const Questions = ({setAllAnswers,setIsResultShowen}) => {
                 '1 (US Average)',
                 '2',
                 '3',
-                '4',
-                '5 to 9',
-                '10 to 14',
-                '15 to 19',
+                '4 to 9',
+                '10 to 19',
                 '20+'
             ]
         },
@@ -142,10 +145,8 @@ const Questions = ({setAllAnswers,setIsResultShowen}) => {
                 '1 (US Average)',
                 '2',
                 '3',
-                '4',
-                '5 to 9',
-                '10 to 14',
-                '15 to 19',
+                '4 to 9',
+                '10 to 19',
                 '20+'
             ]
         },
@@ -172,6 +173,9 @@ const Questions = ({setAllAnswers,setIsResultShowen}) => {
         }else {
             setAllAnswers(answers)
             setIsResultShowen(true)
+            setProgress(0)
+            setCurrentQuestion(0)
+            setAnswers(['','','','','','',[],[],'','','','',''])
         }
     }
 
