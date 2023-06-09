@@ -78,7 +78,7 @@ const busValue = {
 
 const travelValue = {
   0: 0,
-  "1 (US Average)": 1,
+  1: 1,
   2: 2,
   3: 3,
   "4 to 9": 6,

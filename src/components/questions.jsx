@@ -113,7 +113,7 @@ const Questions = ({setAllAnswers,setIsResultShowen}) => {
             question:'Number of long round-trip flights (2500+ miles) I make in a year',
             options:
             [
-                '0 (US Average)',
+                '0',
                 '1',
                 '2',
                 '3',
@@ -128,7 +128,7 @@ const Questions = ({setAllAnswers,setIsResultShowen}) => {
             options:
             [
                 '0',
-                '1 (US Average)',
+                '1',
                 '2',
                 '3',
                 '4 to 9',
@@ -142,7 +142,7 @@ const Questions = ({setAllAnswers,setIsResultShowen}) => {
             options:
             [
                 '0',
-                '1 (US Average)',
+                '1',
                 '2',
                 '3',
                 '4 to 9',
