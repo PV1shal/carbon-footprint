@@ -62,8 +62,9 @@
 
 .questions {
     background-color: rgba(255, 255, 255, 0.25);
-    height: 720px;
     width: 460px;
+    height: 720px;
+    height: fit-content;
     border-radius: 8px;
     border: 2px solid #146531;
     position: absolute;
@@ -72,15 +73,12 @@
     transform: translate(-50%,-50%);
     backdrop-filter: blur(0.4rem);
 }
+
 form {
     display: flex;
     width: fit-content;
 }
-/* .question {
-    height: 540px;
-    width: 460px;
-    padding: 40px;
-} */
+
 
 .questions .holder {
     height: fit-content;
@@ -89,17 +87,15 @@ form {
 }
 
 .questions .holder form {
-    /* height:  600px; */
     height: fit-content;
     display: flex;
-    align-items: center;
+    height: 640px;
     justify-content: flex-start;
     width: fit-content;
     transition: 0.7s;
 }
 .questions .holder .question {
     position: relative;
-    height: 720px;
     width: 460px;
     padding: 30px;
     display: flex;
