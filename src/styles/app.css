@@ -1,7 +1,7 @@
 .App {
     width: 100%;
     min-height: 100vh;
-    background-color: #C6EFC8;
+    background: #fff url(/src/assets/pexels-min-an-1454794.jpg) center center/cover no-repeat;
 }
 .top-image {
     position: fixed;
